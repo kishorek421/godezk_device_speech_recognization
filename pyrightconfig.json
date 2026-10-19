@@ -1,0 +1,8 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "extraPaths": [
+    "walker_audio",
+    "live_audio_test"
+  ]
+}

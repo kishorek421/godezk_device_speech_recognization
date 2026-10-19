@@ -1,0 +1,22 @@
+services:
+  walker-audio-api:
+    build:
+      context: .
+    image: walker-audio-api:latest
+    container_name: walker-audio-api
+    restart: unless-stopped
+    network_mode: host
+    env_file:
+      - .env
+    volumes:
+      - hf-cache:/app/data/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
+
+volumes:
+  hf-cache:

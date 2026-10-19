@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walker-live-audio-test"
+version = "0.1.0"
+description = "Live laptop microphone tester for Walker audio preprocessing"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3",
+  "requests>=2.32,<3",
+  "sounddevice>=0.5.1,<1",
+  "soundfile>=0.12.1,<1",
+  "walker-audio==0.1.0",
+]
+
+[project.optional-dependencies]
+asr = ["torch>=2.6,<3", "nemo_toolkit[asr]>=2.5,<3"]
+dev = ["pytest>=8.3,<10", "ruff>=0.11,<1"]
+
+[project.scripts]
+walker-live-audio = "live_audio_test.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["live_audio_test*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+ignore = ["BLE001"]

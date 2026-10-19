@@ -1,0 +1,136 @@
+# ==============================================================================
+# Audio Recordings & Media Files (DO NOT PUSH)
+# ==============================================================================
+# Exclude recorded audio clips and user voice samples
+recordings/*
+!recordings/.gitkeep
+
+# Exclude any audio media files across the repository
+*.wav
+*.mp3
+*.ogg
+*.opus
+*.webm
+*.flac
+*.m4a
+*.aac
+*.pcm
+*.raw
+
+# ==============================================================================
+# Python Virtual Environments
+# ==============================================================================
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+*/.venv/
+*/venv/
+
+# ==============================================================================
+# Python Bytecode, Caches & Distribution
+# ==============================================================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==============================================================================
+# Testing, Linters & Coverage
+# ==============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# ==============================================================================
+# Benchmark Results, Evaluation Dumps & Test Run Artifacts
+# ==============================================================================
+all_conditions_benchmark_report.csv
+asr_configuration_benchmark_results.json
+baseline_benchmark_results.json
+comparison_asr_vs_salm.csv
+comparison_dictionary_correction.csv
+dictionary_comparison_results.csv
+fault_and_security_audit_results.json
+improved_benchmark_results.json
+speaker_benchmark_results.json
+*_benchmark_results.json
+*_benchmark_report.csv
+comparison_*.csv
+
+# ==============================================================================
+# Scratch & Temporary Testing Scripts / Files
+# ==============================================================================
+scratch/
+scratch_*.py
+.tempmediaStorage/
+temp/
+tmp/
+
+# ==============================================================================
+# Speaker Registry / Biometric Voiceprints (Local user profiles)
+# ==============================================================================
+config/speaker_registry.json
+
+# ==============================================================================
+# Environment Variables & Secrets
+# ==============================================================================
+.env
+.env.*
+!.env.example
+
+# ==============================================================================
+# Logs & Process Output
+# ==============================================================================
+*.log
+logs/
+*.pid
+
+# ==============================================================================
+# Operating System & IDE Files
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~

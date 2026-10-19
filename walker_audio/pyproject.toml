@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walker-audio"
+version = "0.1.0"
+description = "Target-speaker audio preprocessing and Canary-Qwen transcription for Walker"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "numpy>=1.26,<3",
+  "PyYAML>=6.0.2,<7",
+  "scipy>=1.13,<2",
+  "sounddevice>=0.5.1,<1",
+  "soundfile>=0.12.1,<1",
+]
+
+[project.optional-dependencies]
+gpu = [
+  "torch>=2.6,<3",
+  "nemo_toolkit[asr]>=2.5,<3",
+]
+dev = ["pytest>=8.3,<9", "ruff>=0.11,<1"]
+
+[project.scripts]
+walker-audio = "walker_audio.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["walker_audio*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

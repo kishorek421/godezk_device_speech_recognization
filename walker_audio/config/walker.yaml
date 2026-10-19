@@ -1,0 +1,30 @@
+array:
+  sample_rate: 16000
+  speed_of_sound: 343.0
+  microphone_positions_m:
+    - [-0.09, 0.0, 0.0]
+    - [-0.03, 0.0, 0.0]
+    - [0.03, 0.0, 0.0]
+    - [0.09, 0.0, 0.0]
+  scan_min_deg: -75
+  scan_max_deg: 75
+  scan_step_deg: 2.5
+enhancement:
+  enabled: true
+  strength: 0.75
+  noise_seconds: 0.25
+vad:
+  frame_ms: 30
+  threshold_db: 8
+  minimum_speech_ms: 240
+  release_ms: 300
+target:
+  azimuth_tolerance_deg: 20
+  speaker_threshold: 0.7
+  require_speaker_match: false
+models:
+  canary_model: nvidia/canary-qwen-2.5b
+  enhancement_model: nvidia/se_den_sb_16k_small
+  speaker_model: titanet_large
+  device: cuda
+  dtype: bfloat16
