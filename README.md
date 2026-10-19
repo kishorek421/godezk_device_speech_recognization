@@ -1,0 +1,2 @@
+# godezk_device_speech_recognization
+godezk_device_speech_recognization
