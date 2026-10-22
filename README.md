@@ -1,2 +1,2 @@
-# godezk_device_speech_recognization
-godezk_device_speech_recognization
+# godezk_device_speech_to_text
+godezk_device_speech_to_text
