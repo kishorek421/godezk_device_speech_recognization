@@ -40,8 +40,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./audio_api
-          file: ./audio_api/Dockerfile
+          context: .
+          file: ./Dockerfile
           push: true
           tags: |
             kishore2712/godezk_device_speech_to_text:latest
