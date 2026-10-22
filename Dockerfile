@@ -23,6 +23,6 @@ COPY config ./config
 COPY models ./models
 RUN mkdir -p recordings
 
-EXPOSE 8050
+EXPOSE 8025
 
-CMD ["uvicorn", "word_test_server:app", "--host", "0.0.0.0", "--port", "8050"]
+CMD ["sh", "-c", "exec uvicorn word_test_server:app --host 0.0.0.0 --port ${PORT:-8025}"]

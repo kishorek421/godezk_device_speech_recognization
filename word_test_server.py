@@ -120,6 +120,11 @@ def index():
     return HTML_FILE_PATH.read_text(encoding="utf-8")
 
 
+@app.get("/healthz")
+def healthz():
+    return {"status": "ok"}
+
+
 @app.get("/health")
 def health_proxy():
     try:
